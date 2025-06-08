@@ -1,0 +1,30 @@
+PS C:\Users\Administrador> ping 8.8.8.8
+
+Disparando 8.8.8.8 com 32 bytes de dados:
+Falha geral.
+Falha geral.
+Falha geral.
+Falha geral.
+
+Estatísticas do Ping para 8.8.8.8:
+    Pacotes: Enviados = 4, Recebidos = 0, Perdidos = 4 (100% de
+             perda),
+PS C:\Users\Administrador> Get-NetAdapterBinding -Name "Ethernet 2"
+
+Name                           DisplayName                                        ComponentID          Enabled
+----                           -----------                                        -----------          -------
+Ethernet 2                     Virtualização de Rede Aninhada                     ms_l1vhlwf           True
+Ethernet 2                     Respondente de Descoberta de Topologia de Camad... ms_rspndr            True
+Ethernet 2                     Protocolo IP Versão 6 (TCP/IPv6)                   ms_tcpip6            True
+Ethernet 2                     Driver de Protocolo LLDP da Microsoft              ms_lldp              True
+Ethernet 2                     Protocolo do Multiplexador de Adaptador de Rede... ms_implat            False
+Ethernet 2                     Protocolo IP Versão 4 (TCP/IPv4)                   ms_tcpip             True
+Ethernet 2                     Driver de E/S do Mapeador de Descoberta de Topo... ms_lltdio            True
+Ethernet 2                     Comutador Virtual Extensível Hyper-V               vms_pp               False
+Ethernet 2                     Compartilhamento Arquivos e Impressoras para Re... ms_server            True
+Ethernet 2                     Cliente para Redes Microsoft                       ms_msclient          True
+Ethernet 2                     Driver de Ponte                                    ms_l2bridge          True
+Ethernet 2                     Agendador de pacotes de serviço                    ms_pacer             True
+
+
+PS C:\Users\Administrador>
