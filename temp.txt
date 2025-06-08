@@ -1,71 +1,45 @@
-PS C:\Users\Administrador> ping 192.168.0.1
+PS C:\Users\Administrador> netsh int ip reset
+Redefinindo Encaminhamento de Compartimento, OK!
+Redefinindo Compartimento, OK!
+Redefinindo Protocolo de Controle, OK!
+Redefinindo Solicitação de Sequência de Eco, OK!
+Redefinindo Global, OK!
+Redefinindo Interface, OK!
+Redefinindo Endereço Anycast, OK!
+Redefinindo Endereço multicast, OK!
+Redefinindo Endereço Unicast, OK!
+Redefinindo Vizinho, OK!
+Redefinindo Caminho, OK!
+Redefinindo Potencial, OK!
+Redefinindo Política de Prefixo, OK!
+Redefinindo Vizinho de Proxy, OK!
+Redefinindo Rota, OK!
+Redefinindo Prefixo do Site, OK!
+Redefinindo Subinterface, OK!
+Redefinindo Padrão de Ativação, OK!
+Redefinindo Resolver Vizinho, OK!
+Redefinindo , OK!
+Redefinindo , OK!
+Redefinindo , OK!
+Redefinindo , OK!
+Falha ao redefinir .
+Acesso negado.
 
-Disparando 192.168.0.1 com 32 bytes de dados:
-Falha geral.
-Falha geral.
-Falha geral.
-Falha geral.
+Redefinindo , OK!
+Redefinindo , OK!
+Redefinindo , OK!
+Redefinindo , OK!
+Redefinindo , OK!
+Redefinindo , OK!
+Redefinindo , OK!
+Redefinindo , OK!
+Redefinindo , OK!
+Redefinindo , OK!
+Reinicie o computador para concluir esta ação.
 
-Estatísticas do Ping para 192.168.0.1:
-    Pacotes: Enviados = 4, Recebidos = 0, Perdidos = 4 (100% de
-             perda),
-PS C:\Users\Administrador> cat C:\Windows\System32\drivers\etc\hosts
-# Copyright (c) 1993-2009 Microsoft Corp.
-#
-# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
-#
-# This file contains the mappings of IP addresses to host names. Each
-# entry should be kept on an individual line. The IP address should
-# be placed in the first column followed by the corresponding host name.
-# The IP address and the host name should be separated by at least one
-# space.
-#
-# Additionally, comments (such as these) may be inserted on individual
-# lines or following the machine name denoted by a '#' symbol.
-#
-# For example:
-#
-#      102.54.94.97     rhino.acme.com          # source server
-#       38.25.63.10     x.acme.com              # x client host
+PS C:\Users\Administrador> netsh winsock reset
 
-# localhost name resolution is handled within DNS itself.
-#       127.0.0.1       localhost
-#       ::1             localhost
-PS C:\Users\Administrador> ping localhost
+Catálogo Winsock redefinido com êxito.
+Reinicie o computador para concluir a redefinição.
 
-Disparando NSX000471 [::1] com 32 bytes de dados:
-Resposta de ::1: tempo<1ms
-Resposta de ::1: tempo<1ms
-Resposta de ::1: tempo<1ms
-Resposta de ::1: tempo<1ms
-
-Estatísticas do Ping para ::1:
-    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
-             perda),
-Aproximar um número redondo de vezes em milissegundos:
-    Mínimo = 0ms, Máximo = 0ms, Média = 0ms
-PS C:\Users\Administrador> ping 127.0.0.1
-
-Disparando 127.0.0.1 com 32 bytes de dados:
-Resposta de 127.0.0.1: bytes=32 tempo<1ms TTL=128
-Resposta de 127.0.0.1: bytes=32 tempo<1ms TTL=128
-Resposta de 127.0.0.1: bytes=32 tempo<1ms TTL=128
-Resposta de 127.0.0.1: bytes=32 tempo<1ms TTL=128
-
-Estatísticas do Ping para 127.0.0.1:
-    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
-             perda),
-Aproximar um número redondo de vezes em milissegundos:
-    Mínimo = 0ms, Máximo = 0ms, Média = 0ms
-PS C:\Users\Administrador> ping 1.1.1.1
-
-Disparando 1.1.1.1 com 32 bytes de dados:
-Falha geral.
-Falha geral.
-Falha geral.
-Falha geral.
-
-Estatísticas do Ping para 1.1.1.1:
-    Pacotes: Enviados = 4, Recebidos = 0, Perdidos = 4 (100% de
-             perda),
 PS C:\Users\Administrador>
