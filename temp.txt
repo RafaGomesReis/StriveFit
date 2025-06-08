@@ -1,147 +1,71 @@
-O Windows PowerShell
-Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+PS C:\Users\Administrador> ping 192.168.0.1
 
-Instale o PowerShell mais recente para obter novos recursos e aprimoramentos! https://aka.ms/PSWindows
+Disparando 192.168.0.1 com 32 bytes de dados:
+Falha geral.
+Falha geral.
+Falha geral.
+Falha geral.
 
-PS C:\Users\Administrador>
-PS C:\Users\Administrador> netsh interface ip set dns "Ethernet 2" static 1.1.1.1
+Estatísticas do Ping para 192.168.0.1:
+    Pacotes: Enviados = 4, Recebidos = 0, Perdidos = 4 (100% de
+             perda),
+PS C:\Users\Administrador> cat C:\Windows\System32\drivers\etc\hosts
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
 
-O servidor DNS configurado é incorreto ou não existe.
+# localhost name resolution is handled within DNS itself.
+#       127.0.0.1       localhost
+#       ::1             localhost
+PS C:\Users\Administrador> ping localhost
 
-PS C:\Users\Administrador> netsh interface ip add dns "Ethernet 2" 1.1.1.1 index=2
-O objeto já está na lista.
+Disparando NSX000471 [::1] com 32 bytes de dados:
+Resposta de ::1: tempo<1ms
+Resposta de ::1: tempo<1ms
+Resposta de ::1: tempo<1ms
+Resposta de ::1: tempo<1ms
 
+Estatísticas do Ping para ::1:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 0ms, Máximo = 0ms, Média = 0ms
+PS C:\Users\Administrador> ping 127.0.0.1
 
-PS C:\Users\Administrador> ipconfig /release "Ethernet 2"
+Disparando 127.0.0.1 com 32 bytes de dados:
+Resposta de 127.0.0.1: bytes=32 tempo<1ms TTL=128
+Resposta de 127.0.0.1: bytes=32 tempo<1ms TTL=128
+Resposta de 127.0.0.1: bytes=32 tempo<1ms TTL=128
+Resposta de 127.0.0.1: bytes=32 tempo<1ms TTL=128
 
-Configuração de IP do Windows
+Estatísticas do Ping para 127.0.0.1:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 0ms, Máximo = 0ms, Média = 0ms
+PS C:\Users\Administrador> ping 1.1.1.1
 
+Disparando 1.1.1.1 com 32 bytes de dados:
+Falha geral.
+Falha geral.
+Falha geral.
+Falha geral.
 
-Adaptador Ethernet Ethernet 2:
-
-   Sufixo DNS específico de conexão. . . . . . :
-   Endereço IPv6 de link local . . . . . . . . : fe80::f9f9:bef5:ba07:709b%17
-   Gateway Padrão. . . . . . . . . . . . . . . :
-
-Adaptador Ethernet vEthernet (Default Switch):
-
-   Sufixo DNS específico de conexão. . . . . . :
-   Endereço IPv6 de link local . . . . . . . . : fe80::aa30:7667:5084:b534%21
-   Endereço IPv4. . . . . . . .  . . . . . . . : 172.25.208.1
-   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.240.0
-   Gateway Padrão. . . . . . . . . . . . . . . :
-
-Adaptador Ethernet vEthernet (WSL (Hyper-V firewall)):
-
-   Sufixo DNS específico de conexão. . . . . . :
-   Endereço IPv6 de link local . . . . . . . . : fe80::32d9:e44b:b1f0:b9f4%32
-   Endereço IPv4. . . . . . . .  . . . . . . . : 172.22.128.1
-   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.240.0
-   Gateway Padrão. . . . . . . . . . . . . . . :
-PS C:\Users\Administrador> ipconfig /renew "Ethernet 2"
-
-Configuração de IP do Windows
-
-
-Adaptador Ethernet Ethernet 2:
-
-   Sufixo DNS específico de conexão. . . . . . :
-   Endereço IPv6 de link local . . . . . . . . : fe80::f9f9:bef5:ba07:709b%17
-   Endereço IPv4. . . . . . . .  . . . . . . . : 192.168.0.130
-   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.255.0
-   Gateway Padrão. . . . . . . . . . . . . . . : 192.168.0.1
-
-Adaptador Ethernet vEthernet (Default Switch):
-
-   Sufixo DNS específico de conexão. . . . . . :
-   Endereço IPv6 de link local . . . . . . . . : fe80::aa30:7667:5084:b534%21
-   Endereço IPv4. . . . . . . .  . . . . . . . : 172.25.208.1
-   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.240.0
-   Gateway Padrão. . . . . . . . . . . . . . . :
-
-Adaptador Ethernet vEthernet (WSL (Hyper-V firewall)):
-
-   Sufixo DNS específico de conexão. . . . . . :
-   Endereço IPv6 de link local . . . . . . . . : fe80::32d9:e44b:b1f0:b9f4%32
-   Endereço IPv4. . . . . . . .  . . . . . . . : 172.22.128.1
-   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.240.0
-   Gateway Padrão. . . . . . . . . . . . . . . :
-PS C:\Users\Administrador> net stop "DHCP Client"
-O nome de serviço é inválido.
-
-Para obter mais ajuda, digite NET HELPMSG 2185.
-
-PS C:\Users\Administrador> net stop "DNS Client"
-O nome de serviço é inválido.
-
-Para obter mais ajuda, digite NET HELPMSG 2185.
-
-PS C:\Users\Administrador> net stop "Network Connections"
-O nome de serviço é inválido.
-
-Para obter mais ajuda, digite NET HELPMSG 2185.
-
-PS C:\Users\Administrador> net stop "Network Location Awareness"
-O nome de serviço é inválido.
-
-Para obter mais ajuda, digite NET HELPMSG 2185.
-
-PS C:\Users\Administrador> ipconfig /all
-
-Configuração de IP do Windows
-
-   Nome do host. . . . . . . . . . . . . . . . : NSX000471
-   Sufixo DNS primário . . . . . . . . . . . . :
-   Tipo de nó. . . . . . . . . . . . . . . . . : híbrido
-   Roteamento de IP ativado. . . . . . . . . . : não
-   Proxy WINS ativado. . . . . . . . . . . . . : não
-
-Adaptador Ethernet Ethernet 2:
-
-   Sufixo DNS específico de conexão. . . . . . :
-   Descrição . . . . . . . . . . . . . . . . . : Realtek USB GbE Family Controller #2
-   Endereço Físico . . . . . . . . . . . . . . : 28-00-AF-2A-07-13
-   DHCP Habilitado . . . . . . . . . . . . . . : Sim
-   Configuração Automática Habilitada. . . . . : Sim
-   Endereço IPv6 de link local . . . . . . . . : fe80::f9f9:bef5:ba07:709b%17(Preferencial)
-   Endereço IPv4. . . . . . . .  . . . . . . . : 192.168.0.130(Preferencial)
-   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.255.0
-   Concessão Obtida. . . . . . . . . . . . . . : domingo, 8 de junho de 2025 19:49:14
-   Concessão Expira. . . . . . . . . . . . . . : segunda-feira, 9 de junho de 2025 19:49:18
-   Gateway Padrão. . . . . . . . . . . . . . . : 192.168.0.1
-   Servidor DHCP . . . . . . . . . . . . . . . : 192.168.0.1
-   IAID de DHCPv6. . . . . . . . . . . . . . . : 388497583
-   DUID de Cliente DHCPv6. . . . . . . . . . . : 00-01-00-01-2E-7A-4E-92-28-00-AF-2A-07-13
-   Servidores DNS. . . . . . . . . . . . . . . : 1.1.1.1
-   NetBIOS em Tcpip. . . . . . . . . . . . . . : Habilitado
-
-Adaptador Ethernet vEthernet (Default Switch):
-
-   Sufixo DNS específico de conexão. . . . . . :
-   Descrição . . . . . . . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter
-   Endereço Físico . . . . . . . . . . . . . . : 00-15-5D-F2-36-D4
-   DHCP Habilitado . . . . . . . . . . . . . . : Não
-   Configuração Automática Habilitada. . . . . : Sim
-   Endereço IPv6 de link local . . . . . . . . : fe80::aa30:7667:5084:b534%21(Preferencial)
-   Endereço IPv4. . . . . . . .  . . . . . . . : 172.25.208.1(Preferencial)
-   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.240.0
-   Gateway Padrão. . . . . . . . . . . . . . . :
-   IAID de DHCPv6. . . . . . . . . . . . . . . : 352327005
-   DUID de Cliente DHCPv6. . . . . . . . . . . : 00-01-00-01-2E-7A-4E-92-28-00-AF-2A-07-13
-   NetBIOS em Tcpip. . . . . . . . . . . . . . : Habilitado
-
-Adaptador Ethernet vEthernet (WSL (Hyper-V firewall)):
-
-   Sufixo DNS específico de conexão. . . . . . :
-   Descrição . . . . . . . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter #2
-   Endereço Físico . . . . . . . . . . . . . . : 00-15-5D-71-22-98
-   DHCP Habilitado . . . . . . . . . . . . . . : Não
-   Configuração Automática Habilitada. . . . . : Sim
-   Endereço IPv6 de link local . . . . . . . . : fe80::32d9:e44b:b1f0:b9f4%32(Preferencial)
-   Endereço IPv4. . . . . . . .  . . . . . . . : 172.22.128.1(Preferencial)
-   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.240.0
-   Gateway Padrão. . . . . . . . . . . . . . . :
-   IAID de DHCPv6. . . . . . . . . . . . . . . : 536876381
-   DUID de Cliente DHCPv6. . . . . . . . . . . : 00-01-00-01-2E-7A-4E-92-28-00-AF-2A-07-13
-   NetBIOS em Tcpip. . . . . . . . . . . . . . : Habilitado
+Estatísticas do Ping para 1.1.1.1:
+    Pacotes: Enviados = 4, Recebidos = 0, Perdidos = 4 (100% de
+             perda),
 PS C:\Users\Administrador>
