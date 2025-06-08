@@ -1,45 +1,53 @@
-PS C:\Users\Administrador> netsh int ip reset
-Redefinindo Encaminhamento de Compartimento, OK!
-Redefinindo Compartimento, OK!
-Redefinindo Protocolo de Controle, OK!
-Redefinindo Solicitação de Sequência de Eco, OK!
-Redefinindo Global, OK!
-Redefinindo Interface, OK!
-Redefinindo Endereço Anycast, OK!
-Redefinindo Endereço multicast, OK!
-Redefinindo Endereço Unicast, OK!
-Redefinindo Vizinho, OK!
-Redefinindo Caminho, OK!
-Redefinindo Potencial, OK!
-Redefinindo Política de Prefixo, OK!
-Redefinindo Vizinho de Proxy, OK!
-Redefinindo Rota, OK!
-Redefinindo Prefixo do Site, OK!
-Redefinindo Subinterface, OK!
-Redefinindo Padrão de Ativação, OK!
-Redefinindo Resolver Vizinho, OK!
-Redefinindo , OK!
-Redefinindo , OK!
-Redefinindo , OK!
-Redefinindo , OK!
-Falha ao redefinir .
-Acesso negado.
+O Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
-Redefinindo , OK!
-Redefinindo , OK!
-Redefinindo , OK!
-Redefinindo , OK!
-Redefinindo , OK!
-Redefinindo , OK!
-Redefinindo , OK!
-Redefinindo , OK!
-Redefinindo , OK!
-Redefinindo , OK!
-Reinicie o computador para concluir esta ação.
+Instale o PowerShell mais recente para obter novos recursos e aprimoramentos! https://aka.ms/PSWindows
 
-PS C:\Users\Administrador> netsh winsock reset
+PS C:\Users\Administrador> ping 8.8.8.8
 
-Catálogo Winsock redefinido com êxito.
-Reinicie o computador para concluir a redefinição.
+Disparando 8.8.8.8 com 32 bytes de dados:
+Falha geral.
+Falha geral.
 
+Estatísticas do Ping para 8.8.8.8:
+    Pacotes: Enviados = 2, Recebidos = 0, Perdidos = 2 (100% de
+             perda),
+Control-C
+PS C:\Users\Administrador> wsl -- ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet 10.255.255.254/32 brd 10.255.255.254 scope global lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:71:ed:88 brd ff:ff:ff:ff:ff:ff
+    inet 172.22.142.128/20 brd 172.22.143.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fe71:ed88/64 scope link
+       valid_lft forever preferred_lft forever
+PS C:\Users\Administrador> wsl -- ip route
+default via 172.22.128.1 dev eth0 proto kernel
+172.22.128.0/20 dev eth0 proto kernel scope link src 172.22.142.128
+PS C:\Users\Administrador> Get-NetNat
+PS C:\Users\Administrador> Get-Service vmms
+
+Status   Name               DisplayName
+------   ----               -----------
+Running  vmms               Gerenciamento da Máquina Virtual do...
+
+
+PS C:\Users\Administrador> ping 1.1.1.1
+
+Disparando 1.1.1.1 com 32 bytes de dados:
+Falha geral.
+Falha geral.
+Falha geral.
+Falha geral.
+
+Estatísticas do Ping para 1.1.1.1:
+    Pacotes: Enviados = 4, Recebidos = 0, Perdidos = 4 (100% de
+             perda),
 PS C:\Users\Administrador>
