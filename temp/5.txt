@@ -1,0 +1,94 @@
+PS C:\Users\Administrador> sfc /scannow
+
+Iniciando verificação de arquivos. O processo levará alguns minutos para ser concluído.
+
+Iniciando fase de verificação de verificação do sistema.
+Verificação 100% concluída.
+
+A Proteção de Recursos do Windows não encontrou nenhuma violação de integridade.
+PS C:\Users\Administrador> Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
+PS C:\Users\Administrador> ping 8.8.8.8
+
+Disparando 8.8.8.8 com 32 bytes de dados:
+Falha geral.
+Falha geral.
+Falha geral.
+Falha geral.
+
+Estatísticas do Ping para 8.8.8.8:
+    Pacotes: Enviados = 4, Recebidos = 0, Perdidos = 4 (100% de
+             perda),
+PS C:\Users\Administrador> ipconfig /all
+
+Configuração de IP do Windows
+
+   Nome do host. . . . . . . . . . . . . . . . : NSX000471
+   Sufixo DNS primário . . . . . . . . . . . . :
+   Tipo de nó. . . . . . . . . . . . . . . . . : híbrido
+   Roteamento de IP ativado. . . . . . . . . . : não
+   Proxy WINS ativado. . . . . . . . . . . . . : não
+
+Adaptador Ethernet Ethernet 2:
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Descrição . . . . . . . . . . . . . . . . . : Realtek USB GbE Family Controller #2
+   Endereço Físico . . . . . . . . . . . . . . : 28-00-AF-2A-07-13
+   DHCP Habilitado . . . . . . . . . . . . . . : Sim
+   Configuração Automática Habilitada. . . . . : Sim
+   Endereço IPv6 de link local . . . . . . . . : fe80::f9f9:bef5:ba07:709b%19(Preferencial)
+   Endereço IPv4. . . . . . . .  . . . . . . . : 192.168.0.130(Preferencial)
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.255.0
+   Concessão Obtida. . . . . . . . . . . . . . : domingo, 8 de junho de 2025 19:58:44
+   Concessão Expira. . . . . . . . . . . . . . : segunda-feira, 9 de junho de 2025 19:58:43
+   Gateway Padrão. . . . . . . . . . . . . . . : 192.168.0.1
+   Servidor DHCP . . . . . . . . . . . . . . . : 192.168.0.1
+   IAID de DHCPv6. . . . . . . . . . . . . . . : 388497583
+   DUID de Cliente DHCPv6. . . . . . . . . . . : 00-01-00-01-2E-7A-4E-92-28-00-AF-2A-07-13
+   Servidores DNS. . . . . . . . . . . . . . . : 1.1.1.1
+   NetBIOS em Tcpip. . . . . . . . . . . . . . : Habilitado
+
+Adaptador Ethernet vEthernet (Default Switch):
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Descrição . . . . . . . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter
+   Endereço Físico . . . . . . . . . . . . . . : 00-15-5D-F2-36-D4
+   DHCP Habilitado . . . . . . . . . . . . . . : Não
+   Configuração Automática Habilitada. . . . . : Sim
+   Endereço IPv6 de link local . . . . . . . . : fe80::aa30:7667:5084:b534%17(Preferencial)
+   Endereço IPv4. . . . . . . .  . . . . . . . : 172.26.64.1(Preferencial)
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.240.0
+   Gateway Padrão. . . . . . . . . . . . . . . :
+   IAID de DHCPv6. . . . . . . . . . . . . . . : 285218141
+   DUID de Cliente DHCPv6. . . . . . . . . . . : 00-01-00-01-2E-7A-4E-92-28-00-AF-2A-07-13
+   NetBIOS em Tcpip. . . . . . . . . . . . . . : Habilitado
+
+Adaptador Ethernet vEthernet (WSL (Hyper-V firewall)):
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Descrição . . . . . . . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter #2
+   Endereço Físico . . . . . . . . . . . . . . : 00-15-5D-83-8C-3B
+   DHCP Habilitado . . . . . . . . . . . . . . : Não
+   Configuração Automática Habilitada. . . . . : Sim
+   Endereço IPv6 de link local . . . . . . . . : fe80::bdb5:7303:4289:a308%41(Preferencial)
+   Endereço IPv4. . . . . . . .  . . . . . . . : 172.22.128.1(Preferencial)
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.240.0
+   Gateway Padrão. . . . . . . . . . . . . . . :
+   IAID de DHCPv6. . . . . . . . . . . . . . . : 687871325
+   DUID de Cliente DHCPv6. . . . . . . . . . . : 00-01-00-01-2E-7A-4E-92-28-00-AF-2A-07-13
+   NetBIOS em Tcpip. . . . . . . . . . . . . . : Habilitado
+PS C:\Users\Administrador> Get-NetAdapter
+
+Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
+----                      --------------------                    ------- ------       ----------             ---------
+Wi-Fi 5                   Intel(R) Wi-Fi 7 BE200 320MHz                26 Not Present                             0 bps
+vEthernet (WSL (Hyper-... Hyper-V Virtual Ethernet Adapter #2          41 Up           00-15-5D-83-8C-3B        10 Gbps
+vEthernet (Default Swi... Hyper-V Virtual Ethernet Adapter             17 Up           00-15-5D-F2-36-D4        10 Gbps
+Wi-Fi 3                   Intel(R) Wi-Fi 7 BE200 320MHz                21 Not Present                             0 bps
+Ethernet 2                Realtek USB GbE Family Controller #2         19 Up           28-00-AF-2A-07-13         1 Gbps
+Wi-Fi 2                   Intel(R) Wi-Fi 7 BE200 320MHz                13 Not Present  EA-BF-B8-AA-83-CC          0 bps
+AWS Client VPN TAP-Wi...1 TAP-Windows Adapter V9                       11 Not Present  00-FF-34-88-49-13          0 bps
+Wi-Fi                     Intel(R) Wi-Fi 7 BE200 320MHz                 8 Not Present  E8-BF-B8-AA-83-CC          0 bps
+Wi-Fi 4                   Intel(R) Wi-Fi 7 BE200 320MHz                 4 Not Present  E8-BF-B8-AA-83-CD          0 bps
+
+
+PS C:\Users\Administrador>
