@@ -1,17 +1,147 @@
-   netsh interface ip set dns "Ethernet 2" static 1.1.1.1
-   netsh interface ip add dns "Ethernet 2" 1.1.1.1 index=2
+O Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
-      ipconfig /release "Ethernet 2"
-   ipconfig /renew "Ethernet 2"
+Instale o PowerShell mais recente para obter novos recursos e aprimoramentos! https://aka.ms/PSWindows
 
-      net stop "DHCP Client"
-   net stop "DNS Client"
-   net stop "Network Connections"
-   net stop "Network Location Awareness"
-   
-   net start "DHCP Client"
-   net start "DNS Client"
-   net start "Network Connections"
-   net start "Network Location Awareness"
+PS C:\Users\Administrador>
+PS C:\Users\Administrador> netsh interface ip set dns "Ethernet 2" static 1.1.1.1
 
-   
+O servidor DNS configurado é incorreto ou não existe.
+
+PS C:\Users\Administrador> netsh interface ip add dns "Ethernet 2" 1.1.1.1 index=2
+O objeto já está na lista.
+
+
+PS C:\Users\Administrador> ipconfig /release "Ethernet 2"
+
+Configuração de IP do Windows
+
+
+Adaptador Ethernet Ethernet 2:
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Endereço IPv6 de link local . . . . . . . . : fe80::f9f9:bef5:ba07:709b%17
+   Gateway Padrão. . . . . . . . . . . . . . . :
+
+Adaptador Ethernet vEthernet (Default Switch):
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Endereço IPv6 de link local . . . . . . . . : fe80::aa30:7667:5084:b534%21
+   Endereço IPv4. . . . . . . .  . . . . . . . : 172.25.208.1
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.240.0
+   Gateway Padrão. . . . . . . . . . . . . . . :
+
+Adaptador Ethernet vEthernet (WSL (Hyper-V firewall)):
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Endereço IPv6 de link local . . . . . . . . : fe80::32d9:e44b:b1f0:b9f4%32
+   Endereço IPv4. . . . . . . .  . . . . . . . : 172.22.128.1
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.240.0
+   Gateway Padrão. . . . . . . . . . . . . . . :
+PS C:\Users\Administrador> ipconfig /renew "Ethernet 2"
+
+Configuração de IP do Windows
+
+
+Adaptador Ethernet Ethernet 2:
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Endereço IPv6 de link local . . . . . . . . : fe80::f9f9:bef5:ba07:709b%17
+   Endereço IPv4. . . . . . . .  . . . . . . . : 192.168.0.130
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.255.0
+   Gateway Padrão. . . . . . . . . . . . . . . : 192.168.0.1
+
+Adaptador Ethernet vEthernet (Default Switch):
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Endereço IPv6 de link local . . . . . . . . : fe80::aa30:7667:5084:b534%21
+   Endereço IPv4. . . . . . . .  . . . . . . . : 172.25.208.1
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.240.0
+   Gateway Padrão. . . . . . . . . . . . . . . :
+
+Adaptador Ethernet vEthernet (WSL (Hyper-V firewall)):
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Endereço IPv6 de link local . . . . . . . . : fe80::32d9:e44b:b1f0:b9f4%32
+   Endereço IPv4. . . . . . . .  . . . . . . . : 172.22.128.1
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.240.0
+   Gateway Padrão. . . . . . . . . . . . . . . :
+PS C:\Users\Administrador> net stop "DHCP Client"
+O nome de serviço é inválido.
+
+Para obter mais ajuda, digite NET HELPMSG 2185.
+
+PS C:\Users\Administrador> net stop "DNS Client"
+O nome de serviço é inválido.
+
+Para obter mais ajuda, digite NET HELPMSG 2185.
+
+PS C:\Users\Administrador> net stop "Network Connections"
+O nome de serviço é inválido.
+
+Para obter mais ajuda, digite NET HELPMSG 2185.
+
+PS C:\Users\Administrador> net stop "Network Location Awareness"
+O nome de serviço é inválido.
+
+Para obter mais ajuda, digite NET HELPMSG 2185.
+
+PS C:\Users\Administrador> ipconfig /all
+
+Configuração de IP do Windows
+
+   Nome do host. . . . . . . . . . . . . . . . : NSX000471
+   Sufixo DNS primário . . . . . . . . . . . . :
+   Tipo de nó. . . . . . . . . . . . . . . . . : híbrido
+   Roteamento de IP ativado. . . . . . . . . . : não
+   Proxy WINS ativado. . . . . . . . . . . . . : não
+
+Adaptador Ethernet Ethernet 2:
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Descrição . . . . . . . . . . . . . . . . . : Realtek USB GbE Family Controller #2
+   Endereço Físico . . . . . . . . . . . . . . : 28-00-AF-2A-07-13
+   DHCP Habilitado . . . . . . . . . . . . . . : Sim
+   Configuração Automática Habilitada. . . . . : Sim
+   Endereço IPv6 de link local . . . . . . . . : fe80::f9f9:bef5:ba07:709b%17(Preferencial)
+   Endereço IPv4. . . . . . . .  . . . . . . . : 192.168.0.130(Preferencial)
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.255.0
+   Concessão Obtida. . . . . . . . . . . . . . : domingo, 8 de junho de 2025 19:49:14
+   Concessão Expira. . . . . . . . . . . . . . : segunda-feira, 9 de junho de 2025 19:49:18
+   Gateway Padrão. . . . . . . . . . . . . . . : 192.168.0.1
+   Servidor DHCP . . . . . . . . . . . . . . . : 192.168.0.1
+   IAID de DHCPv6. . . . . . . . . . . . . . . : 388497583
+   DUID de Cliente DHCPv6. . . . . . . . . . . : 00-01-00-01-2E-7A-4E-92-28-00-AF-2A-07-13
+   Servidores DNS. . . . . . . . . . . . . . . : 1.1.1.1
+   NetBIOS em Tcpip. . . . . . . . . . . . . . : Habilitado
+
+Adaptador Ethernet vEthernet (Default Switch):
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Descrição . . . . . . . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter
+   Endereço Físico . . . . . . . . . . . . . . : 00-15-5D-F2-36-D4
+   DHCP Habilitado . . . . . . . . . . . . . . : Não
+   Configuração Automática Habilitada. . . . . : Sim
+   Endereço IPv6 de link local . . . . . . . . : fe80::aa30:7667:5084:b534%21(Preferencial)
+   Endereço IPv4. . . . . . . .  . . . . . . . : 172.25.208.1(Preferencial)
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.240.0
+   Gateway Padrão. . . . . . . . . . . . . . . :
+   IAID de DHCPv6. . . . . . . . . . . . . . . : 352327005
+   DUID de Cliente DHCPv6. . . . . . . . . . . : 00-01-00-01-2E-7A-4E-92-28-00-AF-2A-07-13
+   NetBIOS em Tcpip. . . . . . . . . . . . . . : Habilitado
+
+Adaptador Ethernet vEthernet (WSL (Hyper-V firewall)):
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Descrição . . . . . . . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter #2
+   Endereço Físico . . . . . . . . . . . . . . : 00-15-5D-71-22-98
+   DHCP Habilitado . . . . . . . . . . . . . . : Não
+   Configuração Automática Habilitada. . . . . : Sim
+   Endereço IPv6 de link local . . . . . . . . : fe80::32d9:e44b:b1f0:b9f4%32(Preferencial)
+   Endereço IPv4. . . . . . . .  . . . . . . . : 172.22.128.1(Preferencial)
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.240.0
+   Gateway Padrão. . . . . . . . . . . . . . . :
+   IAID de DHCPv6. . . . . . . . . . . . . . . : 536876381
+   DUID de Cliente DHCPv6. . . . . . . . . . . : 00-01-00-01-2E-7A-4E-92-28-00-AF-2A-07-13
+   NetBIOS em Tcpip. . . . . . . . . . . . . . : Habilitado
+PS C:\Users\Administrador>
