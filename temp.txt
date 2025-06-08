@@ -1,43 +1,17 @@
-PS C:\Users\Administrador> netsh interface ip set dns "Ethernet 2" 1.1.1.1 index12
-Elemento não encontrado.
+   netsh interface ip set dns "Ethernet 2" static 1.1.1.1
+   netsh interface ip add dns "Ethernet 2" 1.1.1.1 index=2
 
+      ipconfig /release "Ethernet 2"
+   ipconfig /renew "Ethernet 2"
 
-PS C:\Users\Administrador> netsh interface ip set dns "Ethernet 2" 1.1.1.1 index-2
-Elemento não encontrado.
+      net stop "DHCP Client"
+   net stop "DNS Client"
+   net stop "Network Connections"
+   net stop "Network Location Awareness"
+   
+   net start "DHCP Client"
+   net start "DNS Client"
+   net start "Network Connections"
+   net start "Network Location Awareness"
 
-
-PS C:\Users\Administrador> netsh interface ip add dns "Ethernet 2" 1.1.1.1 index-2
-Parâmetro incorreto.
-
-
-PS C:\Users\Administrador> netsh interface ip add dns "Ethernet 2" 1.1.1.1 index=2
-
-O servidor DNS configurado é incorreto ou não existe.
-
-PS C:\Users\Administrador> ping 1.1.1.1
-
-Disparando 1.1.1.1 com 32 bytes de dados:
-Falha geral.
-Falha geral.
-Falha geral.
-Falha geral.
-
-Estatísticas do Ping para 1.1.1.1:
-    Pacotes: Enviados = 4, Recebidos = 0, Perdidos = 4 (100% de
-             perda),
-PS C:\Users\Administrador> Get-NetAdapter
-
-Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
-----                      --------------------                    ------- ------       ----------             ---------
-vEthernet (Default Swi... Hyper-V Virtual Ethernet Adapter             20 Up           00-15-5D-F2-36-D4        10 Gbps
-Wi-Fi 5                   Intel(R) Wi-Fi 7 BE200 320MHz                26 Not Present                             0 bps
-vEthernet (WSL (Hyper-... Hyper-V Virtual Ethernet Adapter #2          53 Up           00-15-5D-5C-56-7A        10 Gbps
-Wi-Fi 3                   Intel(R) Wi-Fi 7 BE200 320MHz                21 Not Present                             0 bps
-Ethernet 2                Realtek USB GbE Family Controller #2         18 Up           28-00-AF-2A-07-13         1 Gbps
-Wi-Fi 2                   Intel(R) Wi-Fi 7 BE200 320MHz                12 Disabled     EA-BF-B8-AA-83-CC          0 bps
-AWS Client VPN TAP-Wi...1 TAP-Windows Adapter V9                       11 Not Present  00-FF-34-88-49-13          0 bps
-Wi-Fi                     Intel(R) Wi-Fi 7 BE200 320MHz                 8 Disabled     E8-BF-B8-AA-83-CC          0 bps
-Wi-Fi 4                   Intel(R) Wi-Fi 7 BE200 320MHz                 4 Disabled     E8-BF-B8-AA-83-CD          0 bps
-
-
-PS C:\Users\Administrador>
+   
