@@ -1,0 +1,15 @@
+Stack:
+index
+- (tabs)
+    -Início
+    -Stack Lista de Exercícios
+        -lista de exercicíos prontas
+        -Criar lista de exercicíos
+    -Stack lista escolhida/criada
+            -Exercicíos
+                -Para que serve
+                -Como fazer
+            -Temporizador
+    -Stack Organizador Semanal
+        -Dias Escolhidos
+            -Treinos Organizados
